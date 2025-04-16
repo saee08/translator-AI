@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator Tool</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        select, textarea, button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        button {
+            cursor: pointer;
+        }
+        .lang-box {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+        .lang-box select {
+            width: 45%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Translation Tool</h1>
+    
+    <div class="container">
+        <div class="lang-box">
+            <select id="sourceLang"></select>
+            <button onclick="swapLanguages()">Swap Languages</button>
+            <select id="targetLang"></select>
+        </div>
+        
+        <textarea id="inputText" placeholder="Enter text here..."></textarea>
+        
+        <button onclick="translateText()">Translate</button>
+
+        <textarea id="outputText" readonly placeholder="Translated text will appear here..."></textarea>
+    </div>
+
+    <script src="translator.js"></script>
+
+</body>
+</html>

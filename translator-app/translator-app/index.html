@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Translator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        select, textarea, button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+        }
+        .language-box {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        button {
+            cursor: pointer;
+        }
+        .swap-button {
+            width: 50px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Smart Translator</h1>
+    <div class="container">
+        <div class="language-box">
+            <select id="sourceLang"></select>
+            <button class="swap-button" onclick="swapLanguages()">⇄</button>
+            <select id="targetLang"></select>
+        </div>
+        
+        <textarea id="inputText" placeholder="Enter text here..."></textarea>
+        
+        <button onclick="translateText()">Translate</button>
+
+        <textarea id="outputText" readonly placeholder="Translated text will appear here..."></textarea>
+
+        <button onclick="speakText()">Speak</button>
+    </div>
+
+    <script src="translator.js"></script>
+</body>
+</html>
